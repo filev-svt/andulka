@@ -1,0 +1,20 @@
+{
+  "name": "andulka-ico-data-generator",
+  "version": "1.0.0",
+  "description": "simple app for generating lists of data from ico number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "S Filev",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "exceljs": "^1.6.3",
+    "express": "^4.16.4",
+    "node-xlsx": "^0.12.1",
+    "request": "^2.88.0",
+    "xlsx": "^0.14.1",
+    "xlsx-to-json": "^0.3.0"
+  }
+}
