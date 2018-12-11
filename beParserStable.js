@@ -7,7 +7,7 @@ const cheerio = require('cheerio');
 const rp = require('request-promise');
 
 
-const icoListParsed = xlsx.parse(fs.readFileSync('../icoList.xlsx'));
+const icoListParsed = xlsx.parse(fs.readFileSync('./icoList.xlsx'));
 const icoListElements = icoListParsed[0].data;
 
 
@@ -53,7 +53,7 @@ function checkLength(string, string2) {
 async function generateXlsx(odberatel, dodavatel, cena) {
     var workbook = new Excel.Workbook();
 
-    workbook.xlsx.readFile('../faktura.xlsx')
+    workbook.xlsx.readFile('./faktura.xlsx')
         .then(async function() {
 
 
@@ -90,7 +90,7 @@ async function generateXlsx(odberatel, dodavatel, cena) {
                 worksheet.getRow(element).commit();
             });
 
-            return workbook.xlsx.writeFile('../faktury/fakturaCislo' + dodavatel + odberatel + '.xlsx');
+            return workbook.xlsx.writeFile('./faktury/fakturaCislo' + dodavatel + odberatel + '.xlsx');
 
         })
 }
