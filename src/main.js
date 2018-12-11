@@ -6,6 +6,20 @@ const cheerio = require('cheerio');
 
 const rp = require('request-promise');
 
+// var options = {
+//     uri: "https://rejstrik-firem.kurzy.cz/hledej/?s=" + encodeURIComponent(icoNumber) + "&r=True",
+//     transform: function (body) {
+//         return cheerio.load(body);
+//     }
+// };
+ 
+// rp(options)
+//     .then(function ($) {
+//         // Process html like you would with jQuery...
+//     })
+//     .catch(function (err) {
+//         // Crawling failed or Cheerio choked...
+//     });
 
 const icoListParsed = xlsx.parse(fs.readFileSync('../icoList.xlsx'));
 const icoListElements = icoListParsed[0].data;
